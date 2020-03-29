@@ -94,7 +94,7 @@ const getData = (list) => {
   };
 };
 
-fetch('./data.json?' + Date.now())
+fetch('./data.json?v=' + Date.now())
   .then(res => res.json())
   .then((list) => {
     echarts.init(document.getElementById('main')).setOption(getData(list));
